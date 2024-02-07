@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="MainActivity"
+    android:background="@color/grey">
+
+    <ImageView
+        android:id="@+id/login_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/login1" />
+
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="128dp"
+        android:layout_height="220dp"
+        android:src="@drawable/logo2"
+        android:layout_marginStart="32dp"
+        />
+
+    <ImageView
+        android:id="@+id/logo1"
+        android:layout_width="256dp"
+        android:layout_height="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/logo1"
+        />
+
+    <ImageView
+        android:id="@+id/login_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/login2"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="64dp"
+        />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_1"
+        android:text="Welcome to My Telkominfra"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@android:color/black"
+        />
+
+    <TextView
+        android:id="@+id/welcome2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:text="Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
+        android:layout_alignLeft="@+id/welcome"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="14sp"
+        android:textColor="@color/darkgrey"
+        />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/welcome2"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsregular"
+        android:text="username"
+        android:textSize="14sp"
+        android:paddingLeft="16dp"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/darkgrey"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:text="password"
+        android:textSize="14sp"
+        android:paddingLeft="16dp"
+        android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/darkgrey"
+        />
+
+    <TextView
+        android:id="@+id/forgotpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:text="forgot password?"
+        android:layout_alignRight="@+id/password"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="14sp"
+        android:textColor="@color/red"
+        />
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forgotpass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_shape"
+        android:text="sign in"
+        android:textColor="@color/red"
+        android:onClick="signInButtonClicked"/>
+
+</RelativeLayout>

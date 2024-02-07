@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/red"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/toolbar2"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginTop="140dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/backhome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="25dp"
+            android:onClick="backToMain"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="profile"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/hainame"
+            android:layout_width="362dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="65dp"
+            android:src="@drawable/login1"
+            android:background="@drawable/button_shape"
+            />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/fotoprofile" />
+
+        <TextView
+            android:id="@+id/profilename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="90dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Rosifah Amalia"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/nip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="110dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="123456789"
+            android:textColor="@color/darkgrey"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/infoprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Informasi Pribadi"
+            android:textColor="@color/darkgrey2"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="360dp"
+            android:layout_height="400dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_shape"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutinfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/picjabatan"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/jabatan" />
+                <TextView
+                    android:id="@+id/textJabatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jabatan"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/picjabatan"
+                    app:layout_constraintTop_toTopOf="@+id/picjabatan" />
+                <TextView
+                    android:id="@+id/desJabatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Rosifah.aml@gmail.com"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toStartOf="@id/textJabatan"
+                    app:layout_constraintTop_toBottomOf="@+id/textJabatan" />
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/desJabatan" />
+
+                <ImageView
+                    android:id="@+id/picDirektorat"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/picjabatan"
+                    app:srcCompat="@drawable/direktorat" />
+                <TextView
+                    android:id="@+id/textDirektorat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Direktorat"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/picDirektorat"
+                    app:layout_constraintTop_toTopOf="@+id/picDirektorat" />
+                <TextView
+                    android:id="@+id/desDirektorat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Operasi"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textDirektorat"
+                    app:layout_constraintStart_toStartOf="@id/textDirektorat"
+                    />
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/desDirektorat" />
+
+
+
+                <ImageView
+                    android:id="@+id/picUnit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/picDirektorat"
+                    app:srcCompat="@drawable/unit" />
+                <TextView
+                    android:id="@+id/textUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unit"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/picUnit"
+                    app:layout_constraintTop_toTopOf="@+id/picUnit" />
+                <TextView
+                    android:id="@+id/desUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IT dan OPS"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textUnit"
+                    app:layout_constraintStart_toStartOf="@id/textUnit"
+                    />
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/desUnit" />
+
+                <ImageView
+                    android:id="@+id/picEmail"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/picUnit"
+                    app:srcCompat="@drawable/email" />
+                <TextView
+                    android:id="@+id/textEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat Email"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/picEmail"
+                    app:layout_constraintTop_toTopOf="@+id/picEmail" />
+                <TextView
+                    android:id="@+id/desEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rosifah.aml@gmail.com"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textEmail"
+                    app:layout_constraintStart_toStartOf="@id/textEmail"
+                    />
+                <View
+                    android:id="@+id/line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/desEmail" />
+
+                <ImageView
+                    android:id="@+id/picNomor"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/picEmail"
+                    app:srcCompat="@drawable/telepon" />
+                <TextView
+                    android:id="@+id/textTelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Telepon"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/picNomor"
+                    app:layout_constraintTop_toTopOf="@+id/picNomor" />
+                <TextView
+                    android:id="@+id/desTelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="08123456789"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textTelp"
+                    app:layout_constraintStart_toStartOf="@id/textTelp"
+                    />
+                <View
+                    android:id="@+id/line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/desTelp" />
+
+
+                <ImageView
+                    android:id="@+id/picFAQ"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/picNomor"
+                    app:srcCompat="@drawable/faq" />
+                <TextView
+                    android:id="@+id/textFaq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FAQ"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/picFAQ"
+                    app:layout_constraintTop_toTopOf="@+id/picFAQ" />
+
+                <View
+                    android:id="@+id/line6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/picFAQ" />
+
+
+                <ImageView
+                    android:id="@+id/picTentang"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/picFAQ"
+                    app:srcCompat="@drawable/tentang" />
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tentang"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/darkgrey2"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/picTentang"
+                    app:layout_constraintTop_toTopOf="@+id/picTentang" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/preference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Preference"
+            android:textColor="@color/darkgrey2"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/keluar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/preference"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:width="350dp"
+            android:text="keluar"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            android:onClick="backToMainActivity"/>
+    </RelativeLayout>
+
+</ScrollView>
