@@ -386,6 +386,7 @@
             android:layout_centerHorizontal="true"
             android:width="350dp"
             android:text="keluar"
+            android:textColor="@color/red"
             app:srcCompat="?attr/actionModeCloseDrawable"
             android:onClick="backToMainActivity"/>
     </RelativeLayout>
