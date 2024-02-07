@@ -18,7 +18,10 @@ class NewsRepository {
         val data = MutableLiveData<List<Article>>()
         newsApi.getTopHeadline(country, category, apiKey).enqueue(object : Callback<NewsResponse> {
             override fun onResponse(call: Call<NewsResponse>, response: Response<NewsResponse>) {
-                data.value = response.body()?.articles
+                when(response.code()){
+                    200 -> data.value = response.body()?.articles
+                    500 -> Log.e("ERROR", "INTERNAL SERVER ERROR")
+                }
             }
 
             override fun onFailure(call: Call<NewsResponse>, t: Throwable) {
